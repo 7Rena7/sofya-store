@@ -1,0 +1,9 @@
+/* WhatsApp accent color */
+p > .whatsapp-accent {
+    background-color: #25D366;
+    color: #eee;
+}
+
+p > .whatsapp-accent:hover {
+    color: #444;
+}

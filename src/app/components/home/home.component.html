@@ -1,0 +1,277 @@
+<div
+  id="myCarousel"
+  class="carousel slide animated fadeIn"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <svg
+        class="bd-placeholder-img"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      >
+        <rect width="100%" height="100%" fill="#555" />
+      </svg>
+      <!-- <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp"
+        class="d-block w-100"
+        alt="Sunset Over the City"
+        style="object-fit: contain"
+      /> -->
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Prendas de ropa</h1>
+          <p>Prendas de Ropa de alta calidad y exclusividad.</p>
+          <p>
+            <a class="btn btn-lg accent-color" (click)="askForProductWhatsApp()"
+              >Haz tu pedido ahora</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!-- <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp"
+        class="d-block w-100"
+        alt="Canyon at Nigh"
+      /> -->
+      <svg
+        class="bd-placeholder-img"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      >
+        <rect width="100%" height="100%" fill="#888" />
+      </svg>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Trabajos por encargue con atención personalizada</h1>
+          <p>
+            Trabajamos con una modalidad por encargue en la que brindamos
+            atención personalizada a nuestros clientes.
+          </p>
+          <p>
+            <a class="btn btn-lg accent-color" (click)="askForProductWhatsApp()"
+              >Contáctanos</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!-- <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp"
+        class="d-block w-100"
+        alt="Cliff Above a Stormy Sea"
+      /> -->
+      <svg
+        class="bd-placeholder-img"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      >
+        <rect width="100%" height="100%" fill="#555" />
+      </svg>
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>La mayor calidad, al mejor precio</h1>
+          <p>
+            Gracias a nuestro trabajo con los proveedores, podemos ofrecerte
+            prendas de gran calidad, a un precio acequible para todos.
+          </p>
+          <p>
+            <a class="btn btn-lg accent-color" [routerLink]="['/clothes']"
+              >Ver prendas disponibles</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#myCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#myCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+<!-- Marketing messaging and featurettes
+  ================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing animated fadeIn">
+  <!-- Three columns of text below the carousel -->
+  <!-- <div class="row">
+    <div class="col-lg-4">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp"
+        class="w-75 rounded"
+        alt="Cliff Above a Stormy Sea"
+      />
+      <h2 class="fw-normal">Bluzas</h2>
+      <p>
+        Bluzas de la mejor calidad, en todos los colores. Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Suscipit labore facere explicabo
+        autem dolores voluptatibus sit itaque voluptate delectus repudiandae
+        dicta voluptatem consequatur eum,
+      </p>
+      <p><a class="btn accent-color" href="#">Ver más &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp"
+        class="w-75 rounded"
+        alt="Canyon at Nigh"
+      />
+      <h2 class="fw-normal">Vestidos</h2>
+      <p>
+        Vestidos de la mejor calidad, en todos los colores. Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Ipsum, tempore veritatis quis
+        velit numquam autem sequi aspernatur? Sed asperiores
+      </p>
+      <p><a class="btn accent-color" href="#">Ver más &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp"
+        class="w-75 rounded"
+        alt="Cliff Above a Stormy Sea"
+      />
+      <h2 class="fw-normal">Pantalones</h2>
+      <p>
+        Pantalones de Jean especialmente diseñados para vos. Lorem ipsum dolor
+        sit, amet consectetur adipisicing elit. Vel non facilis maxime quidem
+        consequatur quod provident
+      </p>
+      <p><a class="btn accent-color" href="#">Ver más &raquo;</a></p>
+    </div>
+  </div> -->
+  <!-- /.row -->
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider" />
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">
+        Estilo, Moda y Precio.
+        <span class="text-muted">Todo en un solo lugar.</span>
+      </h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+        similique ea iure quisquam provident qui! Modi optio deserunt, at
+        assumenda, ea dolorum quasi unde provident, repellat quam sit non esse!
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img
+        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        width="500"
+        height="500"
+        src="assets/clothes/top-1-green-headon-2.jpeg"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  <hr class="featurette-divider" />
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading fw-normal lh-1">
+        Las mejores prendas.
+        <span class="text-muted">Esperándo a ser lucidas por vos.</span>
+      </h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nobis
+        labore possimus vero! Iste culpa, recusandae repudiandae, laborum sed
+        iusto quasi, pariatur alias tempore magnam minima. Ducimus eveniet quos
+        nihil.
+      </p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img
+        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        width="500"
+        height="500"
+        src="assets/clothes/top-2-black-headon-1.jpeg"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  <hr class="featurette-divider" />
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">
+        No busques más.
+        <span class="text-muted">Esta es tu nueva tienda favorita.</span>
+      </h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ullam
+        quod, dolore minus ex laborum incidunt. Eveniet adipisci sint quod
+        labore maxime, mollitia temporibus nihil consequuntur optio, quibusdam
+        odit nesciunt!
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img
+        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        width="500"
+        height="500"
+        src="assets/clothes/tshirt-2-black:white-headon-1.jpeg"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  <hr class="featurette-divider" />
+</div>

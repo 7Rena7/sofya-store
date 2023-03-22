@@ -1,0 +1,45 @@
+<div class="form-signin w-100 m-auto py-6 animated fadeIn">
+  <form>
+    <img
+      class="mb-4 mx-auto d-block"
+      src="../assets/logo2.png"
+      alt="Logo Sofya"
+      width="130"
+      height="130"
+    />
+    <h2 class="h3 mb-3 fw-normal">Inicio de Administrador</h2>
+
+    <div class="form-floating">
+      <input
+        #email
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="nombre@ejemplo.com"
+        required
+      />
+      <label for="floatingInput text-muted">Correo electrónico</label>
+    </div>
+    <div class="form-floating">
+      <input
+        #password
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Contraseña"
+        required
+      />
+      <label for="floatingPassword text-muted">Contraseña</label>
+    </div>
+
+    <!-- <div class="checkbox mb-3">
+      <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+    </div> -->
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      (click)="$event.preventDefault(); login(email.value, password.value)"
+    >
+      Ingresar
+    </button>
+  </form>
+</div>

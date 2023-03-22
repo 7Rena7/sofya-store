@@ -1,0 +1,17 @@
+div > .accent-color {
+    background-color: #ffbf87;
+}
+
+div > .accent-color:hover {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .logo-container {
+      display: none;
+    }
+
+    .newsletter-form {
+      padding-top: 3rem;
+    }
+  }
