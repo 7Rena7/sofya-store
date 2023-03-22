@@ -1,0 +1,6 @@
+Main color -> #fbf5f5
+Accent 1 -> #ffbf87
+Accent 2 -> #a9a8a6
+Accent 3 -> #d9d9d9
+
+Whatsapp green -> #25D366
