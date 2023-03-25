@@ -46,11 +46,11 @@
       /> -->
       <div class="container">
         <div class="carousel-caption text-start">
-          <h1>La moda no tiene por qué ser costosa.</h1>
+          <h1>La moda no tiene por qué ser costosa</h1>
           <p>Descubre nuestra ropa de alta calidad a precios asequibles.</p>
           <p>
             <a class="btn btn-lg accent-color" [routerLink]="['/clothes']"
-              >Ver la colección disponible</a
+              >Ver colección disponible</a
             >
           </p>
         </div>
@@ -112,7 +112,7 @@
             En nuestro negocio, el servicio al cliente es nuestra prioridad.
           </p>
           <p>
-            <a class="btn btn-lg accent-color" [routerLink]="['/clothes']"
+            <a class="btn btn-lg accent-color" (click)="askForProductWhatsApp()"
               >Contáctanos</a
             >
           </p>
