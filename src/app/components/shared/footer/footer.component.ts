@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
@@ -7,7 +8,5 @@ import { AuthService } from '@auth0/auth0-angular';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  document = document.location.origin;
-
-  constructor(public auth: AuthService) {}
+  constructor(@Inject(DOCUMENT) public document: Document, public auth: AuthService) {}
 }

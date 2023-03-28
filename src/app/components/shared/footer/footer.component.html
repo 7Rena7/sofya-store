@@ -34,7 +34,9 @@
               <a
                 (click)="
                   auth.logout({
-                    logoutParams: { returnTo: 'https://www.sofya-store.com' }
+                    logoutParams: {
+                      returnTo: document.location.origin + '/home'
+                    }
                   })
                 "
                 class="nav-link p-0 text-muted login"
