@@ -6,6 +6,10 @@ div > .accent-color:hover {
     color: #fff;
 }
 
+.login {
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
     .logo-container {
       display: none;

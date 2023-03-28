@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AuthModule } from '@auth0/auth0-angular';
 
 // Routes
 import { routes } from './app.routes';
@@ -14,7 +15,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ClothesCardComponent } from './components/clothes-card/clothes-card.component';
 import { LoginComponent } from './components/login/login.component';
-import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { ClotheComponent } from './components/clothe/clothe.component';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,21 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
     FooterComponent,
     ClothesCardComponent,
     LoginComponent,
-    AdminDashboardComponent
+    ClotheComponent,
+    NoimagePipe,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AuthModule.forRoot({
+      domain: 'dev-41o7dka7h1qzw8ak.us.auth0.com',
+      clientId: '5UKAzdOEuNRLvhnWjtjzdkkcvhY7iufN',
+      authorizationParams: {
+        redirect_uri: `${window.location.origin}/home`
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

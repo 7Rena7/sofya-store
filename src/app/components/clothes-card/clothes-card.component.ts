@@ -13,7 +13,7 @@ export class ClothesCardComponent {
   clothes: Clothe[];
 
   constructor(private clotheService: ClothesService) {
-    this.clothes = this.clotheService.getAllClothes()
+    this.clothes = this.clotheService.getActiveClothes()
   }
 
   askForProductWhatsApp(productName: string) {

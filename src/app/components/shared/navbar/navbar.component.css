@@ -1,3 +1,5 @@
 li > .active {
-    background-color: #ffbf87;
+    /* background-color: #ffbf87; */
+    border-bottom: 3px solid #ffbf87;
+    transition: color 0.3s ease;
 }

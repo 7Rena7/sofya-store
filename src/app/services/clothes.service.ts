@@ -12,7 +12,9 @@ export class ClothesService {
       price: 1990,
       imgs: ['assets/clothes/jacket-timber-1.jpeg'],
       desc: '',
-      idx: 9,
+      idx: 1,
+      quantity: 1,
+      isAvailable: false,
     },
     {
       name: 'Top Star Black',
@@ -20,7 +22,9 @@ export class ClothesService {
       price: 450,
       imgs: ['assets/clothes/top-star-1.jpeg'],
       desc: '',
-      idx: 1,
+      idx: 2,
+      quantity: 1,
+      isAvailable: false,
     },
     {
       name: 'Vest Gray',
@@ -28,7 +32,9 @@ export class ClothesService {
       price: 1490,
       imgs: ['assets/clothes/vest-gray-1.jpeg'],
       desc: '',
-      idx: 10,
+      idx: 3,
+      quantity: 0,
+      isAvailable: true,
     },
     {
       name: 'Timber Jacket',
@@ -36,7 +42,9 @@ export class ClothesService {
       price: 750,
       imgs: ['assets/clothes/skirt-black-1.jpeg'],
       desc: '',
-      idx: 13,
+      idx: 4,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Sweater Pink',
@@ -44,7 +52,9 @@ export class ClothesService {
       price: 690,
       imgs: ['assets/clothes/sweater-pink-headon-1.jpeg', 'assets/clothes/sweater-pink-headon-2.jpeg'],
       desc: '',
-      idx: 0,
+      idx: 5,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Vest Brown',
@@ -52,7 +62,9 @@ export class ClothesService {
       price: 1490,
       imgs: ['assets/clothes/vest-brown-1.jpeg'],
       desc: '',
-      idx: 11,
+      idx: 6,
+      quantity: 0,
+      isAvailable: true,
     },
     {
       name: 'Timber Jacket',
@@ -60,7 +72,9 @@ export class ClothesService {
       price: 1990,
       imgs: ['assets/clothes/timber-jacket-blue-1.jpeg'],
       desc: '',
-      idx: 12,
+      idx: 7,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Green',
@@ -68,7 +82,9 @@ export class ClothesService {
       price: 690,
       imgs: ['assets/clothes/top-1-green-headon-2.jpeg', 'assets/clothes/top-1-green-headon-3.jpeg', 'assets/clothes/top-1-green-back-1.jpeg'],
       desc: '',
-      idx: 2,
+      idx: 8,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Skirt Vinillo 1',
@@ -76,7 +92,9 @@ export class ClothesService {
       price: 750,
       imgs: ['assets/clothes/skirt-vinillo-1.jpeg'],
       desc: '',
-      idx: 2,
+      idx: 9,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Orange',
@@ -84,7 +102,9 @@ export class ClothesService {
       price: 690,
       imgs: ['assets/clothes/top-1-orange-headon-3.jpeg', 'assets/clothes/top-1-orange-headon-1.jpeg', 'assets/clothes/top-1-orange-back-1.jpeg'],
       desc: '',
-      idx: 3,
+      idx: 10,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Black',
@@ -92,7 +112,9 @@ export class ClothesService {
       price: 450,
       imgs: ['assets/clothes/top-black-1.jpeg'],
       desc: '',
-      idx: 3,
+      idx: 11,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Sweater Brown',
@@ -100,7 +122,9 @@ export class ClothesService {
       price: 690,
       imgs: ['assets/clothes/sweater-brown-headon-1.jpeg', 'assets/clothes/sweater-brown-headon-2.jpeg'],
       desc: '',
-      idx: 1,
+      idx: 12,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Corset Black',
@@ -108,7 +132,9 @@ export class ClothesService {
       price: 499,
       imgs: ['assets/clothes/top-corset-black-1.jpeg'],
       desc: '',
-      idx: 1,
+      idx: 13,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Corset Blue',
@@ -116,7 +142,9 @@ export class ClothesService {
       price: 499,
       imgs: ['assets/clothes/top-corset-blue-1.jpeg'],
       desc: '',
-      idx: 1,
+      idx: 14,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top White',
@@ -124,7 +152,9 @@ export class ClothesService {
       price: 690,
       imgs: ['assets/clothes/top-1-white-headon-1.jpeg', 'assets/clothes/top-1-white-headon-4.jpeg', 'assets/clothes/top-1-white-back-1.jpeg'],
       desc: '',
-      idx: 5,
+      idx: 15,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Short Vinillo Black',
@@ -132,7 +162,9 @@ export class ClothesService {
       price: 899,
       imgs: ['assets/clothes/short-vinillo-1.jpeg'],
       desc: '',
-      idx: 5,
+      idx: 16,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Corset Pink',
@@ -140,7 +172,9 @@ export class ClothesService {
       price: 499,
       imgs: ['assets/clothes/top-corset-pink-1.jpeg'],
       desc: '',
-      idx: 1,
+      idx: 17,
+      quantity: 1,
+      isAvailable: false,
     },
     {
       name: 'T-shirt brown',
@@ -148,7 +182,9 @@ export class ClothesService {
       price: 790,
       imgs: ['assets/clothes/tshirt-1-brown-headon-1.jpeg', 'assets/clothes/tshirt-1-brown-headon-2.jpeg'],
       desc: '',
-      idx: 7,
+      idx: 18,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Black',
@@ -156,7 +192,9 @@ export class ClothesService {
       price: 590,
       imgs: ['assets/clothes/top-2-black-headon-1.jpeg'],
       desc: '',
-      idx: 6,
+      idx: 19,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'T-shirt Black & White',
@@ -164,7 +202,9 @@ export class ClothesService {
       price: 890,
       imgs: ['assets/clothes/tshirt-2-black:white-headon-1.jpeg'],
       desc: '',
-      idx: 8,
+      idx: 20,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Violet',
@@ -172,7 +212,9 @@ export class ClothesService {
       price: 690,
       imgs: ['assets/clothes/top-1-violet-headon-4.jpeg', 'assets/clothes/top-1-violet-headon-1.jpeg', 'assets/clothes/top-1-violet-back-1.jpeg'],
       desc: '',
-      idx: 4,
+      idx: 21,
+      quantity: 1,
+      isAvailable: true,
     },
     {
       name: 'Top Mirlo Black',
@@ -180,12 +222,23 @@ export class ClothesService {
       price: 450,
       imgs: ['assets/clothes/top-mirlo-1.jpeg'],
       desc: '',
-      idx: 1,
+      idx: 22,
+      quantity: 1,
+      isAvailable: true,
     },
   ]
   
   getAllClothes() {
     return this.clothes;
+  }
+
+  getActiveClothes() {
+    return this.clothes.filter(({isAvailable, quantity}) => isAvailable && quantity > 0);
+  }
+
+  getClothe(id: number) {
+    const clothe = this.clothes.filter(({idx}) => id === idx);
+    return clothe.length !== 0 ? clothe[0] : null
   }
 
   // TODO: Search by term (add key words to clothes in desc)
@@ -198,9 +251,11 @@ export interface Clothe {
   name: string,
   nameESP: string,
   price: number,
-  imgs: string[],
+  imgs: any[],
   desc: string,
   idx?: number,
+  quantity: number,
+  isAvailable: boolean,
 }
 
 // interface Top extends Clothe {

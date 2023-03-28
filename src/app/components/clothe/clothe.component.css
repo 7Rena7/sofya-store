@@ -1,0 +1,50 @@
+/* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    max-height: 30rem;
+}
+
+/* WhatsApp accent color */
+div > .whatsapp-accent {
+    background-color: #25D366;
+    color: #eee;
+}
+
+div > .whatsapp-accent:hover {
+    color: #444;
+}
+
+/* Image width in mobile */
+@media (max-width: 767px) {
+    .carousel-inner {
+        max-height: 450px;
+    }
+
+    img {
+        width: 400px;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+        padding-top: 1.8rem;
+    }
+
+    .clothe-info {
+        margin-top: 2rem;
+    }
+}

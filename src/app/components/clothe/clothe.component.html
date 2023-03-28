@@ -1,0 +1,74 @@
+<div class="container my-5 animated fadeIn">
+  <div
+    class="row pe-lg-0 py-5 align-items-center justify-content-between rounded-3 border shadow-lg main-container"
+  >
+    <div class="col-lg-6 p-3 p-lg-5 clothe-info">
+      <h2 class="display-4 fw-bold lh-1">{{ clothe?.nameESP }}</h2>
+      <h3>
+        {{ clothe?.price | currency }}
+      </h3>
+      <p class="lead"></p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mt-lg-5">
+        <button
+          class="btn btn-lg px-4 whatsapp-accent"
+          (click)="askForProductWhatsApp(clothe?.nameESP)"
+        >
+          Consultar
+          <i class="bi bi-whatsapp ps-1"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-secondary btn-lg px-4"
+          [routerLink]="['/clothes']"
+        >
+          Volver <i class="bi bi-x"></i>
+        </button>
+      </div>
+    </div>
+    <div
+      id="myCarousel"
+      class="carousel slide carousel-fade animated fadeIn"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner rounded-3 shadow-lg" style="height: 525px">
+        <div class="carousel-item active">
+          <img
+            [src]="clothe?.imgs | noimage"
+            class="d-block w-100"
+            alt="Clothe Image 1"
+            style="object-fit: scale-down"
+            loading="lazy"
+          />
+        </div>
+        <div *ngFor="let image of clothe?.imgs?.slice(1)">
+          <div class="carousel-item">
+            <img
+              [src]="image"
+              class="d-block w-100"
+              alt="Clothe Image"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</div>

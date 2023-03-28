@@ -30,9 +30,24 @@
             >
           </li>
           <li class="nav-item mb-2">
-            <a [routerLink]="['/login']" class="nav-link p-0 text-muted"
-              >Log-in</a
-            >
+            <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+              <a
+                (click)="
+                  auth.logout({
+                    logoutParams: { returnTo: 'https://www.sofya-store.com' }
+                  })
+                "
+                class="nav-link p-0 text-muted login"
+                >Log-out</a
+              >
+            </ng-container>
+            <ng-template #loggedOut>
+              <a
+                (click)="auth.loginWithRedirect()"
+                class="nav-link p-0 text-muted login"
+                >Log-in Administrador</a
+              >
+            </ng-template>
           </li>
         </ul>
       </div>

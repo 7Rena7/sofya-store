@@ -1,0 +1,119 @@
+<div class="main-container">
+  <div class="row animated fadeIn mx-5">
+    <div class="col" *ngIf="auth.user$ | async as profile">
+      <h3>
+        Panel Administrador - {{ profile.nickname | titlecase }} -
+        {{ profile.email }}
+      </h3>
+    </div>
+
+    <div class="col-3 text-right">
+      <button class="btn btn-outline-primary me-3">
+        Agregar <i class="bi bi-plus-circle ps-1"></i>
+      </button>
+      <button class="btn btn-outline-success me-3">
+        Guardar <i class="bi bi-save ps-1"></i>
+      </button>
+      <!-- <button [routerLink]="['./home']" class="btn btn-outline-danger">
+        Salir <i class="bi bi-x ps-1"></i>
+      </button> -->
+    </div>
+  </div>
+
+  <div class="row m-5">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Foto</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <!-- <th>Cambiar Estado</th> -->
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr
+            *ngFor="let clothe of clothes; let i = index"
+            [ngClass]="{
+              'table-secondary': !clothe.isAvailable || clothe.quantity <= 0
+            }"
+          >
+            <td class="fs-4">{{ i + 1 }}</td>
+            <td>
+              <img
+                [src]="clothe.imgs | noimage"
+                class="img-thumbnail"
+                width="75"
+              />
+            </td>
+            <td class="fs-4">{{ clothe.nameESP }}</td>
+            <td class="fs-4">
+              {{ clothe.quantity }} <br />
+              <button
+                class="btn btn-dark btn-md me-2"
+                (click)="
+                  clothe.quantity =
+                    clothe.quantity < 10 ? clothe.quantity + 1 : clothe.quantity
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="btn btn-dark btn-md"
+                (click)="
+                  clothe.quantity =
+                    clothe.quantity > 0 ? clothe.quantity - 1 : clothe.quantity
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-dash"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <!-- <td *ngIf="clothe.isAvailable" class="text-success fs-4">Activo</td>
+            <td *ngIf="!clothe.isAvailable" class="text-danger fs-4">
+              Inactivo
+            </td> -->
+            <td>
+              <button
+                *ngIf="!clothe.isAvailable"
+                (click)="clothe.isAvailable = !clothe.isAvailable"
+                class="btn btn-md btn-danger"
+              >
+                Inactivo
+              </button>
+              <button
+                *ngIf="clothe.isAvailable"
+                (click)="clothe.isAvailable = !clothe.isAvailable"
+                class="btn btn-md btn-success"
+              >
+                Activo
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +10,11 @@ export class LoginComponent {
 
   isLogedIn: boolean = false;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   login(email: string, password: string) {
     if (email === 'admin@admin.com' && password === '123') {
-      console.log(this.route);
+      this.router.navigate(['../admin-panel'], {relativeTo: this.route})
     }
   }
 }
