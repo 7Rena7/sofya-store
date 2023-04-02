@@ -1,0 +1,95 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+  <div class="form-group row mb-2">
+    <label class="col-3 col-form-label">Nombre</label>
+    <div class="col">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Nombre"
+        formControlName="name"
+        [class.is-invalid]="nameNotValid"
+      />
+      <small class="form-text text-danger" *ngIf="nameNotValid"
+        >El nombre debe tener por lo menos 5 letras</small
+      >
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-3 col-form-label">Descripción</label>
+    <div class="col">
+      <input
+        class="form-control"
+        type="textarea"
+        placeholder="Descripción..."
+        formControlName="description"
+        [class.is-invalid]="descriptionNotValid"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-3 col-form-label">Precio</label>
+    <div class="col-5">
+      <!-- <small class="form-text">$</small> -->
+      <input
+        class="form-control"
+        type="number"
+        placeholder="$1490,00"
+        formControlName="price"
+        [class.is-invalid]="priceNotValid"
+      />
+      <small class="form-text text-danger" *ngIf="priceNotValid"
+        >Precio debe ser un número mayor que cincuenta (50)</small
+      >
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-3 col-form-label">Cantidad</label>
+    <div class="col-5">
+      <input
+        class="form-control"
+        type="number"
+        placeholder="Cantidad"
+        formControlName="quantity"
+        [class.is-invalid]="quantityNotValid"
+      />
+      <small class="form-text text-danger" *ngIf="quantityNotValid"
+        >Cantidad debe ser un número mayor a cero (0)</small
+      >
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-3 col-form-label">Fotos</label>
+    <div class="col">
+      <input
+        class="form-control"
+        type="text"
+        placeholder=""
+        formControlName="photos"
+      />
+      <small class="form-text text-danger" *ngIf="false"
+        >Al menos una foto debe ser incluida</small
+      >
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      data-bs-dismiss="modal"
+    >
+      Cerrar <i class="bi bi-x"></i>
+    </button>
+    <button type="submit" class="btn btn-outline-primary">
+      Agregar <i class="bi bi-plus-circle ps-1"></i>
+    </button>
+  </div>
+  <!-- <div class="form-group row">
+    <label class="col-3 col-form-label">&nbsp;</label>
+    <div class="input-group col-5"></div>
+  </div> -->
+</form>

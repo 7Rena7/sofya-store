@@ -1,4 +1,5 @@
 <div class="main-container">
+  <app-new-clothe-modal></app-new-clothe-modal>
   <div class="row animated fadeIn mx-5">
     <div class="col" *ngIf="auth.user$ | async as profile">
       <h3>
@@ -8,7 +9,12 @@
     </div>
 
     <div class="col-3 text-right">
-      <button class="btn btn-outline-primary me-3">
+      <button
+        type="button"
+        class="btn btn-outline-primary me-3"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
         Agregar <i class="bi bi-plus-circle ps-1"></i>
       </button>
       <button class="btn btn-outline-success me-3">

@@ -18,6 +18,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ClotheComponent } from './components/clothe/clothe.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
+import { NewClotheComponent } from './components/admin/new-clothe/new-clothe-modal/new-clothe-modal.component';
+import { NewClotheFormComponent } from './components/admin/new-clothe/new-clothe-form/new-clothe-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.
     LoginComponent,
     ClotheComponent,
     NoimagePipe,
-    AdminPanelComponent
+    AdminPanelComponent,
+    NewClotheComponent,
+    NewClotheFormComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,8 @@ import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.
       authorizationParams: {
         redirect_uri: `${window.location.origin}/home`
       }
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
